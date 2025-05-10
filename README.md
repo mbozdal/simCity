@@ -69,24 +69,52 @@ Each file consists of two distinct phases:
 - **Total Files:** 30
 
 ### 🔤 File Naming Convention
-`attack_<scope>_<attack_type>_<intensity>.csv`
+The naming convention encodes information about the presence of control logic, attack scope, type, and intensity. The files are categorized as follows:
 
-**Examples:**
-- `scaling_10_pv.csv`
-- `zeroing_30_all.csv`
-- `baseline.csv` (clean, no attacks)
+`attack_<scope>_<attack_type>_<intensity>.csv` (Without Control Logic Implementation)
+
+`action_data_attack_<scope>_<attack_type>_<intensity>.csv` (With Control Logic Implementation)
+
+#### 📌 Examples
+
+- `baseline.csv`  
+  *(Clean scenario without control logic)*
+
+- `action_data_baseline.csv`  
+  *(Clean scenario with control logic)*
+  
+- `attack_consumption_burst_10.csv`  
+  *(Attack targeting consumption using a burst pattern, intensity level 10; no control logic)*
+
+- `action_data_attack_consumption_burst_10.csv`  
+  *(Same attack with control logic enabled)*
+
+- `attack_wind_production_zeroing_10.csv`  
+  *(Zeroing attack on wind production at intensity level 10)*
+
+---
 
 ### 📊 Data Columns
 
-| Column Name       | Description                                   |
-|-------------------|-----------------------------------------------|
-| `timestamp`       | Time index of the simulation                  |
-| `pv_generation`   | PV power output (kW)                          |
-| `wind_generation` | Wind power output (kW)                        |
-| `load_consumption`| Load demand (kW)                              |
-| `storage_action`  | EMS decision (charge/discharge amount, kW)    |
-| `grid_import`     | Grid import by the EMS (kW)                   |
-| `attack_label`    | `0` = clean, `1` = attack-injected            |
+| **Column Name**        | **Description**                                                                 |
+|------------------------|---------------------------------------------------------------------------------|
+| `timestamp`            | Time index of the simulation (e.g., hourly resolution).                         |
+| `pv_production`        | Power output from photovoltaic sources (kW).                                    |
+| `wind_production`      | Power output from wind turbines (kW).                                           |
+| `consumption`          | Total power consumption of the system (kW).                                     |
+| `battery_charge`       | Power input to the battery for charging (kW).                                   |
+| `battery_discharge`    | Power output from the battery during discharge (kW).                            |
+| `hydrogen_charge`      | Power used to charge the hydrogen storage system (kW).                          |
+| `hydrogen_discharge`   | Power supplied by the hydrogen system during discharge (kW).                    |
+| `grid_import`          | Power imported from the external grid (kW).                                     |
+| `curtailment`          | Unutilized renewable energy (kW), curtailed due to storage limits.              |
+| `battery_level`        | State of charge of the battery (kWh).                                           |
+| `hydrogen_level`       | Stored hydrogen energy level (kWh).                                             |
+| `total_production`     | Aggregate power production from all renewable sources and storage usage(kW).    |
+| `total_consumption`    | Combined system demand including consumption and storage charging (kW).         |
+| `Status`               | System operating state ('Normal' or 'Attack').                                  |
+| `Attack_Description`   | Description of the attack scenario, if any, applied at the timestamp.           |
+| `Original_Value`       | Unaltered value  prior to any attack manipulation.                              |
 
 ---
 
