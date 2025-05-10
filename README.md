@@ -12,8 +12,7 @@ Learn more at the [HI-ACT website](https://hi-act.ac.uk/about-us/).
 
 # 📘 Benchmarking Datasets for Hydrogen Energy Systems
 
-This dataset was created through the simulation of attacks a distributed hydrogen energy system implementedon real world data collected from Rye Microgrid [1] comprising photovoltaic (PV) panel, wind turbine, battery , electrolyzer, fuel cell, and energy consumer.
-In the simulation, each component communicates independently with a centralized Energy Management System (EMS) using TCP.
+This dataset was created through  cyber attacks on a distributed hydrogen energy system. The simulation environment was constructed using real-world data collected from the **Rye Microgrid** [1], which integrates multiple energy assets including photovoltaic (PV) panels, wind turbines, battery storage, electrolyzers, fuel cells, and energy consumers. In the simulation, each component communicates independently with a centralized Energy Management System (EMS) using TCP.
 The EMS uses this data to manage energy storage, perform grid interaction, and maintain system balance.
 
 The primary aim of this dataset is to support research into Intrusion Detection Systems (IDS) by providing both clean and manipulated data traces,
