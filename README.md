@@ -2,8 +2,9 @@
   <img src="https://github.com/user-attachments/assets/22d144fc-9321-4e6f-aa4c-a190407d1403" alt="HI-ACT Banner" />
 </div>
 
-This research is supported by the Hydrogen Integration for Accelerated Energy Transitions Hub (**HI-ACT**). The HI-ACT initiative brings together UK researchers, industry, government, and the public to address key challenges in integrating **hydrogen and alternative liquid fuels (HALF)** across sectors and regions. It aims to clarify their roles and value within the broader energy system.
+This research is supported by the Hydrogen Integration for Accelerated Energy Transitions Hub (**HI-ACT**).
 
+The HI-ACT initiative brings together UK researchers, industry, government, and the public to address key challenges in integrating **hydrogen and alternative liquid fuels (HALF)** across sectors and regions. It aims to clarify their roles and value within the broader energy system.
 The **HI-ACT Hub** comprises **10 universities** across the UK and over **40 project partners**, fostering cross-disciplinary collaboration for research, innovation, and policy.
 
 Learn more at the [HI-ACT website](https://hi-act.ac.uk/about-us/).
