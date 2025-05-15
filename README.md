@@ -31,35 +31,38 @@ Each file consists of two distinct phases:
 
 ### 🧨 Attack Types
 
-1. **Scaling Attack**
-   - Formula:  
-     `x_attack(t) = x(t) × (1 + γ)`
-   - Example: γ = 0.1 → 10% increase; γ = -0.1 → 10% decrease
+ **1.Scaling Attack:**
 
-2. **Burst Attack**
-   - Formula:  
-     ```
-     x_attack(t) = {
-       x(t₀) × (1 + γ)   if t ∈ [t₀, t₀ + n)
-       x(t)              otherwise
-     }
-     ```
+![image](https://github.com/user-attachments/assets/f1905859-dd7c-4b67-bc2d-972ba90d3699)
+
+
+   - 	T_attack represents the set of random time steps during which the attack is active.
+   - 	γ = 0.1 → 10% increase; γ = -0.1 → 10% decrease
+
+ **2.Burst Attack**
+   - Formula:
+    
+![image](https://github.com/user-attachments/assets/544627cf-47c0-4f5e-9166-b988d5fb67d8)
+
    - Simulates value freezing/repetition after manipulation
 
-3. **Zeroing Attack**
-   - Formula:  
-     `x_attack(t) = 0`
-   - Emulates sensor failure or signal loss
+ **3.Zeroing Attack:**
+
+  ![image](https://github.com/user-attachments/assets/89857aed-1f64-449d-9f9e-c7451fb54a9d)
+
+    
+
+- Emulates sensor failure or signal loss
 
 ### 🎯 Attack Intensity Levels
 
-- 10%, 20%, 30% (γ = ±0.1, ±0.2, ±0.3)
+- The proportion of manipulated data within the dataset is specified as 10%, 20%, and 30%. Note that the dataset is conceptually divided into two halves; the first half remains unaltered, while the specified percentages of manipulation apply exclusively to the second half.
 
 ### 🧭 Attack Scope
 
 - PV only
 - Wind only
-- All components (PV + Wind + Load)
+- All components (PV + Wind + Consumption)
 
 ---
 ### 📁 File Format
